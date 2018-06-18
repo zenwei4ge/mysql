@@ -1,0 +1,16 @@
+Linux下安装
+安装前，我们可以检测系统是否自带安装 MySQL:     rpm -qa | grep mysql
+如果你系统有安装，那可以选择进行卸载:     
+                            rpm -e mysql　　// 普通删除模式
+                            rpm -e --nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除
+需要先去官网下载 Yum 资源包
+                    wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+                    rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+                    yum install mysql-server
+启动 MySQL：
+              systemctl start mysqld
+查看 MySQL 运行状态：
+              systemctl status mysqld
+验证 MySQL 安装
+            
+            
