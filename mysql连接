@@ -1,0 +1,4 @@
+使用mysql二进制方式连接
+                  mysql -u root -p
+                  在登录成功后会出现 mysql> 命令提示窗口
+                  退出 mysql> 命令提示窗口可以使用 exit 命令
