@@ -1,0 +1,38 @@
+ 创建数据库      CREATE DATABASE 数据库名;或mysqladmin -u root -p create RUNOOB;
+ 删除数据库      drop database <数据库名>;或mysqladmin -u root -p drop RUNOOB;
+ 选择数据库      use 数据库名
+ 创建MySQL数据表需要以下信息：
+                    表名
+                    表字段名
+                    定义每个表字段
+                    CREATE TABLE table_name (column_name column_type);
+                    示例
+                              CREATE TABLE IF NOT EXISTS `runoob_tbl`(
+                                 `runoob_id` INT UNSIGNED AUTO_INCREMENT,
+                                 `runoob_title` VARCHAR(100) NOT NULL,
+                                 `runoob_author` VARCHAR(40) NOT NULL,
+                                 `submission_date` DATE,
+                                 PRIMARY KEY ( `runoob_id` )
+                              )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+MySQL 删除数据表         DROP TABLE table_name ;
+MySQL 插入数据            INSERT INTO table_name ( field1, field2,...fieldN )
+                       VALUES
+                       ( value1, value2,...valueN );
+MySQL 查询数据
+                        SELECT column_name,column_name
+                        FROM table_name
+                        [WHERE Clause]
+                        [LIMIT N][ OFFSET M]
+                        
+                        select * : 返回所有记录
+                         limit N : 返回 N 条记录
+                         offset M : 跳过 M 条记录, 默认 M=0, 单独使用似乎不起作用
+                         limit N,M : 相当于 offset N limit M , 从第 N 条记录开始, 返回 M 条记录
+修改或更新 MySQL 中的数据
+                    UPDATE table_name SET field1=new-value1, field2=new-value2 [WHERE Clause]
+删除 MySQL 数据表中的记录
+                      DELETE FROM table_name [WHERE Clause]
+                        
+                        
+                        
+                        
